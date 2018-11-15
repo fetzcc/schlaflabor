@@ -16,7 +16,7 @@
     "gulp-coffee": "^3.0.2",
     "gulp-file-include": "^2.0.1",
     "gulp-htmlmin": "^4.0.0",
-    "gulp-sass": "^4.0.1",
+    "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.4"
   },
   "dependencies": {
