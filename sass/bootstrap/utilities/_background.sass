@@ -1,0 +1,17 @@
+// stylelint-disable declaration-no-important
+
+@each $color, $value in $theme-colors
+  +bg-variant(".bg-#{$color}", $value)
+
+@if $enable-gradients
+  @each $color, $value in $theme-colors
+    +bg-gradient-variant(".bg-gradient-#{$color}", $value)
+
+.bg-white
+  background-color: $white !important
+
+.bg-transparent
+  background-color: transparent !important
+
+.bg-gradient
+  background: transparent repeating-linear-gradient(to top, transparent 0%, transparent 20px, #7f8d60 20px, #98a087 calc(100% - 20px)) repeat-x

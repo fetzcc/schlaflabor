@@ -1,0 +1,21 @@
+<div id="@@href" class="row align-items-cente2r mb-150px text">
+  <div class="col-12 col-lg-6 mb-4 @@if (context.direction == 'right') {order-0 order-lg-1}">
+    <h3 class="h2 mb-5 mb-md-3">@@title</h3>
+    <div class="d-flex justify-content-center d-md-none mb-5">
+      <img src="img/services/@@thumb" alt="@@title" class="img-fluid">
+    </div>
+    <p>@@text</p>
+    @@if (context.list) {
+      <ul>
+        @@list
+      </ul>
+    }
+    <button type="button" data-toggle="modal" data-target="#openModal" class="btn btn-outline-primary d-flex d-md-inline-flex align-items-center justify-content-center">
+      <span class="arrow mr-3 d-none d-sm-block"></span>
+      <span>Fragen Sie jetzt an!</span>
+    </button>
+  </div>
+  <div class="d-none col-12 col-lg-6 mb-4 @@if (context.direction == 'right') {order-1 order-lg-0} d-md-flex justify-content-center align-items-center justify-content-lg-@@thumb-align align-items-lg-@@thumb-valign">
+    <img src="img/services/@@thumb" alt="@@title" class="img-fluid">
+  </div>
+</div>

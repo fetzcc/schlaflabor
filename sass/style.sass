@@ -1,0 +1,264 @@
+@charset "UTF-8"
+
+@import bootstrap/functions
+
+@import variables
+
+@import bootstrap/bootstrap
+
+\:focus
+  outline: 0 !important
+
+body
+  padding-top: 120px 
+
+#map
+  position: relative
+  height: 500px
+  
+.page-header
+  text-align: center
+
+  .subtitle
+    margin: 0
+    font:
+      size: 1.375rem
+      weight: 300
+    line-height: 1.53846
+    color: $body-color
+    +media-breakpoint-up(md)
+      font-size: 1.625rem
+
+.home-service
+  a
+    display: block
+    color: $body-color
+    line-height: 1.5
+    font-size: 1rem
+    +media-breakpoint-up(md)
+      font-size: 1.125rem
+      line-height: 1.9444
+
+.entry
+  $this: &
+  display: block
+  box-shadow: 0 0 0 1px $gray-100
+  transition: $transition-base
+  margin: 0 0 $grid-gutter-width
+  &__img
+    position: relative
+    height: 230px
+    border-bottom: 0
+    overflow: hidden
+  &__overlay
+    position: absolute
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    opacity: 0
+    transition: opacity 0.2s ease-in-out, transform 0.4s linear
+    background: transparent
+    background-repeat: no-repeat
+    background-size: cover
+    z-index: 1
+    transform: scale(1.15)
+  &__title
+    background: $gray-100
+    transition: $transition-base
+    color: $body-color
+    padding: 1.25rem
+    span
+      display: block
+  +hover-focus
+    text-decoration: none
+    box-shadow: 0 0 1.25rem rgba($black, 0.22)
+    #{$this}__overlay
+      opacity: 1
+      transform: scale(1)
+    #{$this}__title
+      background: $white
+
+.footer-bg
+  position: relative
+  background: transparent url('../img/footer-bg.png') no-repeat center center
+  background-size: cover
+
+.contact-form
+  position: relative
+
+.list-checked
+  +list-unstyled
+  > li
+    padding-left: 2rem
+    position: relative
+    margin-bottom: 0.5rem
+    &:before
+      display: block
+      content: "\f00c"
+      font-family: 'FontAwesome'
+      color: theme-color('primary')
+      position: absolute
+      left: 0
+      top: 0
+      width: 1rem
+      height: 1.875rem     
+
+.contactTarget
+  position: absolute
+  text-align: center
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  background: $white
+  display: none
+  z-index: 55
+  &.show
+    display: flex
+.arrow
+  display: block
+  position: relative
+  height: 2px 
+  width: 1.6875rem
+  transition: $transition-base
+  background: theme-color('primary')
+  &:before,
+  &:after
+    background: theme-color('primary')
+    display: block
+    content: ""
+    position: absolute
+    top: 0
+    right: 0
+    height: 2px
+    width: 10px
+    transition: $transition-base
+  &:before
+    transform: rotate(40deg)
+    transform-origin: bottom right
+  &:after
+    transform: rotate(-40deg)
+    transform-origin: top right
+
+#header
+  z-index: $zindex-fixed !important
+
+#header,
+.mm-navbars_top
+  border-top: 2px solid theme-color('primary')
+
+.headroom--not-top
+  box-shadow: 0 0 10px 0 rgba($black, 0.24)
+  .navbar
+    padding: $navbar-padding-y/2 $navbar-padding-x
+
+.mm-menu 
+  --mm-listitem-size: 50px
+  --mm-navbar-size: 58px
+  --mm-color-background: #{$white}
+  --mm-color-background-highlight: #{theme-color('primary')}
+  --mm-color-text: #{$dropdown-link-color}
+  --mm-color-text-dimmed: #{$black}
+  &.invisible
+    visibility: visible !important
+
+.mm-navbar
+  .nav-logo
+    padding: 0
+    img
+      height: 32px
+
+.mm-listitem__text
+  font:
+    size: 1.125rem
+
+.mm-listitem
+  &:after
+    left: 0
+
+.text
+  font-size: 1.125rem
+  line-height: 1.6667
+  p,
+  ul
+    margin-bottom: 2rem
+  ul:not(.list-unstyled)
+    padding-left: 1.25rem
+
+.text2
+  line-height: 1.5
+
+.text3
+  ul:not(.list-unstyled)
+    padding-left: 1.25rem
+form
+  label
+    display: block
+    color: #666
+    font:
+      size: 0.875rem
+      weight: $font-weight-bold
+
+.blockquote
+  &:before
+    content: "\„"
+    display: block
+    color: theme-color('primary')
+    font-size: 7.5rem
+    font-family: $font-family-serif
+
+.display-1
+  font-family: 'HucklebuckJF'
+  background: linear-gradient(to right, rgba($white, 0.77) 85%, transparent 15%), linear-gradient(to right, rgba($white, 0.77) 85%, transparent 15%)
+  background-size: 11px 1px
+  background-position: left top, left bottom
+  background-repeat: repeat-x
+
+.intro
+  background: linear-gradient(to right, rgba(238, 238, 238, 0) 0%, #738e9b 57%, #193a48 100%), $white url('../img/head.jpg') center 2rem
+  background-repeat: no-repeat
+  background-size: auto, cover
+  background-blend-mode: multiply
+  background-attachment: fixed
+  position: relative
+  &__subtitle
+    font:
+      size: 0.75rem
+    text-transform: uppercase
+    letter-spacing: 2.57px
+    color: $white
+    margin: 0 0 1.25rem
+  &__nav
+    a
+      display: block
+      font:
+        family: $font-family-serif
+        size: 1.625rem
+      line-height: 2rem
+      text-align: center
+      padding: 0.625rem
+      color: theme-color('warning')
+      border: 1px dotted transparent
+      margin: 0 0 0.625rem
+      +hover-focus
+        border-color: theme-color('warning')
+        text-decoration: none
+
+.fc
+  position: relative
+  +media-breakpoint-up(lg)
+    margin-top: -100px
+
+#footer
+  font-size: 0.75rem
+  line-height: 1.5
+  padding: 1.5rem 0
+  position: relative
+  .border-top
+    margin-bottom: 1.5rem
+
+#mm-1
+  padding-top: 0
+  .mm-navbar
+    display: none

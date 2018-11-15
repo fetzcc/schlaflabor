@@ -1,0 +1,24 @@
+@@include('inc/header.html', {"title": "Home"})
+
+@@include('inc/nav.html', {"menu": "0"})
+
+@@include('inc/page-header.html', {
+  "title": "Hallo,",
+  "subtitle": "wir sind eine Agentur für <br> Grafik-Design und Werbung"
+})
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-8 mx-auto">
+      <div class="lead text-center mb-100px">Ihr Fokus liegt auf Ihrem Tagesgeschäft, ihren Produkten und Dienstleistungen. Und das ist auch gut so. Damit Sie aber gesehen, gefunden und verstanden werden, dafür sind wir da.</div>
+    </div>
+  </div>
+  <div class="row mb-100px">        
+    @@loop("inc/entry.html", "data/home.json")
+  </div>
+  <div class="row mb-5">
+    @@include('inc/service-list.html')
+  </div>
+</div>
+
+@@include('inc/footer.html', {"bg": true})
