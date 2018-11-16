@@ -102,36 +102,42 @@ $ ->
     $('#openModal .subbtn').prop('disabled', false)
 
 
-# The latitude and longitude of your business / place
-position = [48.2241196,14.1010463]
+# define array of maps. marker and center for different values
+maps = [
+  {
+    marker: [48.2241196, 14.1010463]
+    center: [48.2245196, 14.1019463]
+    map_id: "map_1"
+  }
+  {
+    marker: [48.2241196, 14.1010463]
+    center: [48.2235196, 14.1005463]
+    map_id: "map_2"
+  }
+]
 
 showGoogleMaps = () ->
-
-  latLng = new google.maps.LatLng(position[0], position[1])
-
+  # define maps options with hidden all map controls
   mapOptions =
     zoom: 17
-    streetViewControl: false
-    scaleControl: true
-    scrollwheel: false
-    navigationControl: false
-    mapTypeControl: false
     draggable: true
     mapTypeId: google.maps.MapTypeId.ROADMAP
-    center: latLng
-    #disableDefaultUI: true
+    disableDefaultUI: true
 
-  map = new google.maps.Map(document.getElementById('map'), mapOptions)
-  map1 = new google.maps.Map(document.getElementById('map1'), mapOptions)
-
-  console.log map.length
-  # Show the default red marker at the location
-  marker = new google.maps.Marker
-    position: latLng
-    map: map
-    draggable: false
-    animation: google.maps.Animation.DROP
-    icon: 'img/marker.png'
+  for m in maps
+    # set center and marker point if there are different
+    centerPoint = new google.maps.LatLng(m.center[0], m.center[1])
+    markerPoint = new google.maps.LatLng(m.marker[0], m.marker[1])
+    # init map
+    map = new google.maps.Map(document.getElementById(m.map_id), mapOptions)
+    map.setCenter(centerPoint)
+    # draw marker on map
+    marker = new google.maps.Marker
+      position: markerPoint
+      map: map
+      draggable: false
+      animation: google.maps.Animation.DROP
+      icon: 'img/marker.png'
 
 if typeof google != 'undefined'
   google.maps.event.addDomListener(window, 'load', showGoogleMaps)

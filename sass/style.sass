@@ -147,10 +147,23 @@ address
     font-size: 16px
     line-height: 21px
     text-decoration: none
-#map,
-#map1
-  width: 694px
-  height: 377px
+
+.map
+  height: 400px
+  position: relative
+  &:after
+    content: ""
+    position: absolute
+    display: block
+    left: 0
+    right: 0
+    bottom: 0
+    height: 30px
+    background: $white
+    z-index: $zindex-dropdown
+
+
+
 .box  
   max-width: 1425px
   margin: 0 auto
