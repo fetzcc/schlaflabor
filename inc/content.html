@@ -7,9 +7,9 @@
 		</div>
 	</div>
 </div>
-<div class="container">
-	<div class="row">
-		<div id="first_block" class="col">
+<div id="first_block" class="container">
+	<div class="row no-gutters justify-content-center bg-white">
+		<div class="col-12 col-md-11">
 		<h2 class="mt-6 mb-0">Hightech-Diagnostik – <br>Ihr Weg zu gesundem Schlaf</h2>
 		<p class="mt-35px mb-0">
 			In unserem interdisziplinären Schlaflabor liefert ein hochspezialisiertes Team eine präzise Diagnose über die Ursache Ihrer schlaflosen Nächte: Techniker und Ärzte mit jahrelanger Erfahrung in verschiedenen medizinischen Fachrichtungen legen volles Augenmerk auf Ihren Schlaf. Unsere Aufgabe ist es, Schlafstörungen zu erkennen, zu messen und die Diagnose sowie alle erhobenen Daten und Informationen Ihrem Arzt zur Verfügung zu stellen. So kann dieser die für Sie notwendige Behandlung vornehmen und entsprechende Maßnahmen treffen, damit Sie wieder gut schlafen können. Um das bestmögliche Resultat zu liefern, greifen wir in schweren Fällen auf ein Netzwerk mit Schlaflaboren in ganz Europa zurück.
@@ -48,30 +48,38 @@
 <div class="d-flex align-items-center bg mt-100px">
 	<div class="container">
 		<div class="row">
-			<div class="col-3 under_txt mb-30px">
+			<div class="col-3">
+				<div class="under_txt mb-30px">
 				<img class="img-fluid" src="img/thumb1.jpg" alt="thumb1">
 				<p>
 					Vor dem Schlafengehen werden die Messinstrumente angebracht.
 				</p>
 			</div>
-			<div class="col-3 under_txt mb-30px">
+			</div>
+			<div class="col-3">
+				<div class="under_txt mb-30px">
 				<img class="img-fluid" src="img/thumb2.jpg" alt="thumb2">
 				<p>
 					Durch die geringe Größe des Messgerätes herrscht maximale Bewegungsfreiheit.
 				</p>
 			</div>
-			<div class="col-3 under_txt mb-30px">
+		</div>
+			<div class="col-3">
+				<div class="under_txt mb-30px">
 				<img class="img-fluid" src="img/thumb3.jpg" alt="thumb3">
 				<p>
 					Am nächsten Morgen erfolgt die Besprechung der Ergebnisse und die Übergabe der Messdaten.
 				</p>
+				</div>
 			</div>
-			<div class="col-3 under_txt">
+			<div class="col-3 ">
+				<div class="under_txt mb-30px">
 				<img class="img-fluid" src="img/thumb4.png" alt="thumb4">
 				<p>
 					Beispielkurve Messergebnisse
 				</p>
 			</div>
+		</div>
 		</div>
 	</div>
 </div>
@@ -157,47 +165,55 @@
 	</div>
 </div>
 	<div class="d-flex justify-content-around mt-90px">
-		<div class="mr-30px">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2678.581724501371!2d13.014676214853054!3d47.82832268062937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1542288961015" frameborder="0" style="border:0" allowfullscreen></iframe>
-		</div>
-		<div>
-			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2678.581724501371!2d13.014676214853054!3d47.82832268062937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1542288961015" frameborder="0" style="border:0" allowfullscreen></iframe>
-		</div>
+	<div id="map"></div>
+	<div id="map1" class="ml-3"></div>
 	</div>
 <div class="container">
-	<div class="row mt-130px">
-		<div class="col-6">
-			<p class="h1">Kontakt</p>
-			<label for="">Name</label>
-			<input type="text">
-			<label for="">Kontakt (E-Mail oder Telefonnummer)</label>
-			<input type="text">
-			<label for="">Ihre Nachricht</label>
-			<input type="text">
-			<p>Ich habe die Hinweise zum Datenschutz gelesen und erkläre mich durch Aktivieren der Checkbox mit der Erhebung, der Verarbeitung sowie der Nutzung meiner persönlichen Kontaktdaten einverstanden.</p>
-			<button>Anfrage senden</button>
+		<p class="h1 mt-130px mb-4">Kontakt</p>
+	<div class="row">	
+		<div class="col-12 col-lg-6 mb-5 mb-lg-0">
+			<form>
+			<div class="form-group mb-3">
+ 				<label class="mb-1" for="Name_usr">Name</label>
+				<input type="text" class="form-control" id="Name_usr" placeholder="Name">
+			</div>
+			<div class="form-group mb-3">
+ 				<label class="mb-1" for="contact_usr">Kontakt (E-Mail oder Telefonnummer)</label>
+				<input type="email" class="form-control" id="contact_usr" placeholder="E-Mail">
+			</div>
+			<div class="form-group">
+				<label class="mb-2 mt-1" for="area_usr">Ihre Nachricht</label>
+				<textarea class="form-control" id="area_usr" rows="2" placeholder="Nachricht"></textarea>
+			</div>
+			<div class="custom-control custom-checkbox mb-4">
+              <input type="checkbox" class="custom-control-input" name="check" id="f_check" required>
+              <label class="custom-control-label text-muted font-weight-normal" for="f_check">Ich habe die Hinweise zum <a href="@@base_url/datenschutz" target="_blank">Datenschutz</a> gelesen und erkläre mich durch Aktivieren der Checkbox mit der Erhebung, der Verarbeitung sowie der Nutzung meiner persönlichen Kontaktdaten einverstanden.</label>
+            </div>
+            <button type="submit" class="subbtn btn btn-primary btn-lg font-weight-normal">Anfrage senden</button>
+          </form>
 		</div>
-		<div class="col-6" style="margin-top: 68px">
-			<p>
-				Ein Unternehmen der<br>
+		<div class="col-12 offset-1 col-lg-4">
+			<address class="mt-3">
+			<p class="mb-35px">
+				<span class="font-weight-bold mb-2">Ein Unternehmen der</span><br>	
 				Helios Technologie GmbH<br>
 				Innsbrucker Bundesstraße 75<br>	
 				5020 Salzburg
 			</p>
-			<p>
+			<p class="mb-35px">
 				+43 (0)662 42 40 40 <br>
-				office@helios-schlaflabor.at
+				<a href="mailto:office@helios-schlaflabor.at" class="mail">office@helios-schlaflabor.at</a>
 			</p>
-			<p>
+			<p class="mb-35px">
 				Geschäftsführer: Wolfgang Klampfer				
 			</p>
-			<p>
+			<p class="mb-3">
 				FN: 186232x • UID: ATU47873706				
 			</p>
-			<p>
-				Impressum • Datenschutz
+			<p class="blue">
+				<a href="">Impressum</a> • <a href="">Datenschutz</a>
 			</p>
+			</address>
 		</div>
 	</div>
 </div>
-

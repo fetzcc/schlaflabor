@@ -122,6 +122,7 @@ showGoogleMaps = () ->
     #disableDefaultUI: true
 
   map = new google.maps.Map(document.getElementById('map'), mapOptions)
+  map1 = new google.maps.Map(document.getElementById('map1'), mapOptions)
 
   console.log map.length
   # Show the default red marker at the location

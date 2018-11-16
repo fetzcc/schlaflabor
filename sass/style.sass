@@ -65,6 +65,8 @@ body
   height: 100vh
   background-image: url(/img/header-mask.png), url(/img/header-bg.jpg)
   background-repeat: no-repeat, no-repeat
+  background-size: auto, cover
+  max-height: 800px
   background-position: right -15% center, bottom
 .bg
   background-image: url(/img/header-bg.jpg)
@@ -76,9 +78,6 @@ h1
   line-height: 91px
   text-transform: uppercase
   font-weight: 600
-#first_block
-   background-color: #fff 
-   margin-top: -30px
 .blue
   color: $blue
   font-weight: 600
@@ -108,3 +107,38 @@ small
     text-transform: uppercase
     letter-spacing: 2.6px
     margin-top: -10px
++media-breakpoint-up(md)
+  #first_block
+    margin-top: -30px
+.h1
+  color: #4a4a4a
+form
+  label
+    color: #666666
+    font-family: "Nunito Sans"
+    font-size: 14px
+    font-weight: 700
+  input
+    color: #4a4a4a
+    font-family: "Nunito Sans"
+    font-size: 17px
+    line-height: 21px
+address
+  color: #757575;
+  font-family: "Nunito Sans";
+  p
+    font-size: 18px
+    line-height: 26px
+  .mail
+    color: $blue
+    text-decoration: none
+.blue
+  color: $blue
+  a
+    font-size: 16px
+    line-height: 21px
+    text-decoration: none
+#map,
+#map1
+  width: 694px
+  height: 377px

@@ -118,7 +118,7 @@ $(function() {
 position = [48.2241196, 14.1010463];
 
 showGoogleMaps = function() {
-  var latLng, map, mapOptions, marker;
+  var latLng, map, map1, mapOptions, marker;
   latLng = new google.maps.LatLng(position[0], position[1]);
   mapOptions = {
     zoom: 17,
@@ -133,6 +133,7 @@ showGoogleMaps = function() {
   };
   //disableDefaultUI: true
   map = new google.maps.Map(document.getElementById('map'), mapOptions);
+  map1 = new google.maps.Map(document.getElementById('map1'), mapOptions);
   console.log(map.length);
   // Show the default red marker at the location
   return marker = new google.maps.Marker({
