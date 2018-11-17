@@ -72,7 +72,7 @@
 
 .text-zona
   font:
-    size: 6.875rem
+    size: 2.6rem
     family: 'Zona Pro Hairline'
   color: $white
   opacity: 0.73
@@ -82,7 +82,9 @@
   span
     display: block
     font-family: 'Zona Pro SemiBold'
-
++media-breakpoint-up(lg)
+  .text-zona
+    font-size: 6.875rem
 .blue
   color: $blue
   font-weight: 600
@@ -90,8 +92,11 @@
   margin-top: 138px
   background: transparent repeating-linear-gradient(to top, transparent 0%, transparent 20px, #0078a1 20px, #0b9ccc calc(100% - 20px)) repeat-x
 p 
-  font-size: 22px
+  font-size: 18px
   font-weight: 300
++media-breakpoint-up(lg)
+  p
+    font-size: 22px
 .under_txt
   margin-top: 40px
   text-align: left
@@ -119,6 +124,8 @@ small
     font-size: 13px
     text-transform: uppercase
     letter-spacing: 2.6px
+
+
 +media-breakpoint-up(lg)
   #first_block
     margin-top: -30px
