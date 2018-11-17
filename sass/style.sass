@@ -9,9 +9,6 @@
 \:focus
   outline: 0 !important
 
-body
-  padding-top: 120px 
-
 #header
   z-index: $zindex-fixed !important
 
@@ -61,6 +58,7 @@ body
 
 
 .multi-bg-example 
+  padding-top: 120px 
   width: 100%
   height: 100vh
   background-image: url(/img/header-mask.png), url(/img/header-bg.jpg)
@@ -71,6 +69,8 @@ body
 .bg
   background-image: url(/img/header-bg.jpg)
   background-position: top
+  width: 100%
+  background-repeat: no-repeat
 h1
   font-size: 110px
   color: $white
@@ -82,10 +82,11 @@ h1
   color: $blue
   font-weight: 600
 .bg_imgg
-  margin-top: 166px
-  background: transparent repeating-linear-gradient(to top, transparent 0%, transparent 22px, #0078a1 20px, #0b9ccc calc(100% - 20px)) repeat-x
+  margin-top: 138px
+  background: transparent repeating-linear-gradient(to top, transparent 0%, transparent 20px, #0078a1 20px, #0b9ccc calc(100% - 20px)) repeat-x
 p 
   font-size: 22px
+  font-weight: 300
 .under_txt
   margin-top: 40px
   text-align: left
@@ -106,16 +107,13 @@ small,
     font-family: "Muli"
     font-size: 32px
     font-weight: 300  
-    margin-bottom: -20px
+    margin-bottom: -15px
   small 
     margin-left: 2px
 small
-    font-family: "Nunito Sans"
     font-size: 13px
-    font-weight: 400
     text-transform: uppercase
     letter-spacing: 2.6px
-    margin-top: -10px
 +media-breakpoint-up(md)
   #first_block
     margin-top: -30px
@@ -147,7 +145,6 @@ address
     font-size: 16px
     line-height: 21px
     text-decoration: none
-
 .map
   height: 400px
   position: relative
@@ -161,15 +158,18 @@ address
     height: 30px
     background: $white
     z-index: $zindex-dropdown
-
-
-
+.text-right,
+.text-left
+  p
+    font-size: 18px
+  .adrees
+    font-size: 26px
+    font-family: Muli
+    font-weight: 400
 .box  
   max-width: 1425px
   margin: 0 auto
 .txt_pict
   color: $white
-  font-family: "Nunito Sans"
   font-size: 18px
-  font-weight: 400
-  line-height: 26px  
+  line-height: 26px
