@@ -14,7 +14,7 @@ parse_str($post_json, $post_data);
 
 $subject = 'Kontakt';
 
-$text = '<p><b>Name</b>:' . $post_data['name'] . '</p><p><b>Telefon</b>:' . $post_data['phone'] . '</p><p><b>Nachricht</b>:' . $post_data['text'] . '</p>';
+$text = '<p><b>Name</b>:' . $post_data['name'] . '</p><p><b>Nachricht</b>:' . $post_data['text'] . '</p>';
 
 $mail = new PHPMailer(true);   
 
@@ -23,11 +23,10 @@ try {
   $mail->Encoding = 'base64';
   $mail->isMail();
   $mail->From     = 'noreply@fetz.cc';
-  $mail->FromName = 'agentur.fetz.cc';
+  $mail->FromName = 'office@helios-schlaflabor.at';
   $mail->isHTML(); 
 
-  $mail->addAddress('agentur@fetz.cc');
-  $mail->addCC('smotzart@yandex.ru');
+  $mail->addAddress('office@helios-schlaflabor.at');
   if (isset($post_data['email']) && !empty($post_data['email'])) {
     $text .= '<p><b>Email</b>:' . $post_data['email'] . '</p>';
     $mail->AddReplyTo($post_data['email'], $post_data['name']);
