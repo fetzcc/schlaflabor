@@ -146,13 +146,29 @@ address
     border: 0
   h2:first-child
     margin: 0 0 2rem
-  p 
+  p,
+  ul
     font:
       size: 1.125rem
       weight: 300
     +media-breakpoint-up(lg)
       font-size: 1.375rem
 
+  ul    
+    margin: 0 0 2.1875rem
+    padding-left: 1.125rem
+    +media-breakpoint-up(lg)
+      padding-left: 1.375rem
 .text3
   ul:not(.list-unstyled)
     padding-left: 1.25rem
+
+figure
+  display: table
+
+figcaption 
+  display: table-caption
+  caption-side: bottom
+  font-size: 1.1875rem
+  line-height: 1.5263
+  color: theme-color('secondary')
