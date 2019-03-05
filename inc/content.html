@@ -35,7 +35,7 @@
         <p>Beim nachstehenden Beispiel sind die Schlafphasen gestört.</p>
         <img src="img/graph1.png" alt="" class="img-fluid mb-3">
         <p>Beim gesunden Schlaf wechseln die Schlafphasen in regelmäßigen Abständen.</p>
-        <img src="img/graph1.png" alt="" class="img-fluid mb-3">
+        <img src="img/graph2.png" alt="" class="img-fluid mb-3">
       </div>
 
       <div class="row">
@@ -73,45 +73,45 @@
       </div>
       <div class="col-12 col-lg-6 col-xl-5 pr-xl-0 text-white py-6">
         <div class="mb-4">
-          <h2 class="font-weight-light mb-0">Dr. Erst Mayrhofer</h2>
-          <small class="text-uppercase">Leitender Arzt</small>
+          <h2 class="font-weight-light mb-0">Dr. Markus Blaukovitsch</h2>
+          <small class="text-uppercase">MMedSc</small>
         </div>
-        <p>Wirr versuchen Ihnen die Nächte hier so angenehm wie möglich zu machen, denn wir möchten ja IHREN SCHLAF aufzeichnen und auswerten können.</p>
-        <p>Sie können ein bisschen dazu beitragen, dass die erste Nacht im Schlaflabor keine Schlaflose wird...</p>
-      </div>
+        <p class="lead">Der Schlaf ist wie eine Taube: Streckt man die Hand ruhig nach ihr aus, setzt sie sich drauf. Greift man nach ihr, fliegt sie weg.</p>
+        <small>Zitat v. Dubois</small>
+      </div> 
     </div>
   </div>
 </div>
 
 <div class="container">
   <div class="row mb-80px">
-    <div class="col-12 col-sm-6 col-md-5 mb-4 text-sm-right">
-      <h4 class="mb-4">Schlaflabor 1</h4>
+    <div class="col-12 col-md-6 pr-md-5 mb-4 text-md-right">
+      <h5 class="mb-4">EMCO <br class="d-none d-md-block d-lg-none">PRIVATKLINIK GmbH</h5>
       <address>
         <p>
-          in der EMCO-Privatklinik<br>
-          Martin-Hell-Straße 7-9<br>
-          5422 Bad Dürrnberg / Salzburg
+          Schlaflabor 2. Stock <br>
+          Martin-Hell-Str. 7-9 <br>
+          5422 Bad Dürrnberg/Salzburg
         </p>
         <p>
-          Telefonische Anmeldung <br>
-          +43 (0)6245 790 - 500<br>
-          (Mo - Fr von 8.00 bis 17.00 Uhr)
+          Telefon: <a href="tel:+43 6245 790 0">+43 6245 790 0</a> <br>
+          Fax: +43 6245 790 590 <br>
+          <a href="mailto:aufnahme@emco-klinik.at">aufnahme@emco-klinik.at</a>
         </p>
       </address>
     </div>
-    <div class="col-12 col-sm-6 col-md-5 mb-4 offset-md-2">
-      <h4 class="mb-4">Schlaflabor 2</h4>
+    <div class="col-12 col-md-6 pl-md-5 mb-4">
+      <h5 class="mb-4">Kardinal Schwarzenberg Klinikum GmbH</h5>
       <address>
         <p>
-          in der EMCO-Privatklinik<br>
-          Martin-Hell-Straße 7-9<br>
-          5422 Bad Dürrnberg / Salzburg
+          Schlaflabor HNO Ambulanz <br>
+          Kardinal Schwarzenbergplatz 1 <br>
+          5620 Schwarzach im Pongau
         </p>
         <p>
-          Telefonische Anmeldung <br>
-          +43 (0)6245 790 - 500<br>
-          (Mo - Fr von 8.00 bis 17.00 Uhr)
+          Telefon: <a href="tel:+43 6415 7101-6220">+43 6415 7101-6220</a> <br>
+          Fax: +43 6415 6766-6220 <br>
+          <a href="mailto:hno@ks-klinikum.at">hno@ks-klinikum.at</a>
         </p>
       </address>
     </div>
@@ -134,18 +134,19 @@
   <p class="h1 mb-4 text-body">Kontakt</p>
   <div class="row"> 
     <div class="col-12 col-lg-6 mb-5 mb-lg-0">
-      <form>
+      <form name="cForm" class="contact-form">
+        <div class="contactTarget align-items-center justify-content-center p-4"></div>
         <div class="form-group mb-3">
           <label class="mb-1" for="Name_usr">Name</label>
-          <input type="text" class="form-control" id="Name_usr" placeholder="Name">
+          <input type="text" name="name" class="form-control" id="Name_usr" placeholder="Name" required>
         </div>
         <div class="form-group mb-3">
           <label class="mb-1" for="contact_usr">E-Mail</label>
-          <input type="email" class="form-control" id="contact_usr" placeholder="E-Mail">
+          <input type="email" name="email" class="form-control" id="contact_usr" placeholder="E-Mail" required>
         </div>
         <div class="form-group">
           <label class="mb-2 mt-1" for="area_usr">Ihre Nachricht</label>
-          <textarea class="form-control" id="area_usr" rows="2" placeholder="Nachricht"></textarea>
+          <textarea class="form-control" name="text" id="area_usr" rows="2" placeholder="Nachricht"></textarea>
         </div>
         <div class="custom-control custom-checkbox mb-4">
           <input type="checkbox" class="custom-control-input" name="check" id="f_check" required>

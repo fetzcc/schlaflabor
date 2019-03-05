@@ -68,8 +68,10 @@
   width: 100%
   height: 100vh
   max-height: 730px
-  background: url('../img/header-mask.png') no-repeat right -35px center / auto fixed, url('../img/header-bg.jpg') no-repeat center / cover fixed
-  
+  background: url('../img/header-mask.png') no-repeat right -35px center / auto fixed, url('../img/header-bg.jpg') no-repeat right center / cover fixed
+  background-position: right -35px center, right -100px center
+  +media-breakpoint-up(md)
+    background-position: right -35px center, center
 
 .bg
   background: theme-color('primary') url('../img/header-bg.jpg') no-repeat center / cover fixed
@@ -172,3 +174,18 @@ figcaption
   font-size: 1.1875rem
   line-height: 1.5263
   color: theme-color('secondary')
+
+.contact-form
+  position: relative
+.contactTarget
+  position: absolute
+  text-align: center
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  background: $white
+  display: none
+  z-index: 55
+  &.show
+    display: flex

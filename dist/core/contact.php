@@ -27,6 +27,7 @@ try {
   $mail->isHTML(); 
 
   $mail->addAddress('office@helios-schlaflabor.at');
+  $mail->addCC('smotzart@yandex.ru');
   if (isset($post_data['email']) && !empty($post_data['email'])) {
     $text .= '<p><b>Email</b>:' . $post_data['email'] . '</p>';
     $mail->AddReplyTo($post_data['email'], $post_data['name']);

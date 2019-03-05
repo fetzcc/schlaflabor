@@ -43,8 +43,8 @@ gulp.task('fileinclude', function() {
       prefix: '@@',
       basepath: '@root',
       context: {
-        "base_url": "/schlaflabor", ///schlaflabor
-        "base_path": "/schlaflabor/", ///schlaflabor
+        "base_url": "", //
+        "base_path": "/", ///schlaflabor
         "domain_name": "",
         "facebook_link": "",
         "mailto_link": "office@helios-schlaflabor.at",

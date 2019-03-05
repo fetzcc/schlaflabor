@@ -105,13 +105,13 @@ $ ->
 # define array of maps. marker and center for different values
 maps = [
   {
-    marker: [48.2241196, 14.1010463]
-    center: [48.2245196, 14.1019463]
+    marker: [47.171420, 13.098130]
+    center: [47.171420, 13.098130]
     map_id: "map_1"
   }
   {
-    marker: [48.2241196, 14.1010463]
-    center: [48.2235196, 14.1005463]
+    marker: [47.321830, 13.153550]
+    center: [47.321830, 13.153550]
     map_id: "map_2"
   }
 ]
